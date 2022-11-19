@@ -39,9 +39,9 @@ class Category extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 9,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
+                crossAxisCount: 2,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
                 mainAxisExtent: 200),
             itemBuilder: (context, index) {
               return ClipRRect(
@@ -58,8 +58,17 @@ class Category extends StatelessWidget {
                     color: Colors.white,
                     child: Column(
                       children: [
-                        Image.asset(categoryImages[index]),
-                        Text(categoriesList[index]),
+                        Image.asset(
+                          categoryImages[index],
+                          height: 150,
+                          fit: BoxFit.scaleDown,
+                        ),
+                        Text(
+                          categoriesList[index],
+                          style: const TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 100, 90, 163)),
+                        ),
                       ],
                     ),
                   ),

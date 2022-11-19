@@ -11,6 +11,7 @@ class CatogaryDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title!),
+        backgroundColor: Color.fromARGB(255, 58, 50, 107),
       ),
       body: StreamBuilder(
         stream: FirestoreServices.getArtists(title),
@@ -29,15 +30,24 @@ class CatogaryDetails extends StatelessWidget {
             var data = snapshot.data!.docs;
 
             return Container(
-              padding: const EdgeInsets.all(12),
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 100, 90, 163),
+                    spreadRadius: 10,
+                    blurRadius: 2,
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(40),
               child: GridView.builder(
                   shrinkWrap: true,
                   itemCount: data.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1,
-                      mainAxisSpacing: 8,
+                      mainAxisSpacing: 40,
                       crossAxisSpacing: 8,
-                      mainAxisExtent: 500),
+                      mainAxisExtent: 400),
                   itemBuilder: (context, index) {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(20),
@@ -53,7 +63,8 @@ class CatogaryDetails extends StatelessWidget {
                           child: Column(
                             children: [
                               Image.network(
-                                data[index]['imgUrl'][0],
+                                data[index]['imgUrl'],
+                                fit: BoxFit.scaleDown,
                               ),
                               Text("${data[index]['fullname']}"),
                               Text("${data[index]['tags']}"),
