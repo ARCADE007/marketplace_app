@@ -32,12 +32,27 @@ class Welcome extends StatelessWidget {
                   children: [
                     Image.asset(
                       'assets/logo.png',
+                      height: 200,
                     ),
                   ],
                 ),
               ),
               Positioned(
-                  bottom: 100,
+                top: 180,
+                bottom: 10,
+                left: 0,
+                right: 0,
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/Character.png',
+                      width: 1000,
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                  bottom: -10,
                   left: 0,
                   right: 0,
                   child: Padding(
@@ -53,7 +68,7 @@ class Welcome extends StatelessWidget {
                         height: 50,
                         decoration: const BoxDecoration(
                           // color:'#bc84e8',
-                          color: Color.fromRGBO(188, 132, 232, 1.0),
+                          color: Color.fromARGB(255, 108, 99, 255),
 
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                         ),

@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.2.0
   cloud_firestore: ^4.0.5
+  youtube_player_flutter: ^8.1.1
+  chips_choice: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +74,12 @@ flutter:
     - assets/photography.png
     - assets/tattoo.png
     - assets/writer.png
+    - assets/mail.png
+    - assets/instagram.png
+    - assets/website.png
+    - assets/youtube.png
+    - assets/explore.png
+    - assets/Character.png
 
   #   - images/a_dot_ham.jpeg
 

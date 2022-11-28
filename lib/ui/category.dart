@@ -32,7 +32,13 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 100, 90, 163),
+      appBar: AppBar(
+        title: const Text(
+          "Category",
+        ),
+        backgroundColor: const Color.fromARGB(255, 54, 49, 148),
+      ),
+      backgroundColor: const Color.fromARGB(255, 108, 99, 255),
       body: Container(
         padding: const EdgeInsets.all(12),
         child: GridView.builder(
